@@ -3,8 +3,8 @@ package screens
 import (
 	"testing"
 
-	"github.com/santifer/career-ops/dashboard/internal/model"
-	"github.com/santifer/career-ops/dashboard/internal/theme"
+	"github.com/vanhaydoi/career-job/dashboard/internal/model"
+	"github.com/vanhaydoi/career-job/dashboard/internal/theme"
 )
 
 func TestWithReloadedDataPreservesStateAndSelection(t *testing.T) {
