@@ -1,41 +1,5 @@
 # Career-Ops
 
-[English](README.md) | [Tiếng Việt](README.vi.md)
-
-<p align="center">
-  <a href="https://x.com/santifer"><img src="docs/hero-banner.jpg" alt="Career-Ops — Multi-Agent Job Search System" width="800"></a>
-</p>
-
-<p align="center">
-  <em>Tôi đã mất hàng tháng trời tìm việc theo cách thủ công. Vì vậy tôi xây dựng hệ thống mà mình ước có từ đầu.</em><br>
-  Công ty dùng AI để lọc ứng viên. <strong>Tôi mang AI đến cho ứng viên để <em>chọn</em> công ty.</strong><br>
-  <em>Giờ đã open source.</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Claude_Code-000?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
-  <img src="https://img.shields.io/badge/OpenCode-111827?style=flat&logo=terminal&logoColor=white" alt="OpenCode">
-  <img src="https://img.shields.io/badge/Codex_(soon)-6B7280?style=flat&logo=openai&logoColor=white" alt="Codex">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white" alt="Playwright">
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT">
-  <a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white" alt="Discord"></a>
-  <br>
-  <img src="https://img.shields.io/badge/EN-blue?style=flat" alt="EN">
-  <img src="https://img.shields.io/badge/VI-red?style=flat" alt="VI">
-</p>
-
----
-
-<p align="center">
-  <img src="docs/demo.gif" alt="Career-Ops Demo" width="800">
-</p>
-
-<p align="center"><strong>740+ tin tuyển dụng đã đánh giá · 100+ CV cá nhân hóa · 1 vai trò trong mơ đã đạt được</strong></p>
-
-<p align="center"><a href="https://discord.gg/8pRpHETxa4"><img src="https://img.shields.io/badge/Join_the_community-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a></p>
-
 ## Đây là gì?
 
 Career-Ops biến bất kỳ CLI AI coding nào thành một trung tâm chỉ huy tìm việc toàn diện. Thay vì theo dõi đơn ứng tuyển thủ công trong bảng tính, bạn có một pipeline hỗ trợ AI:
@@ -46,13 +10,11 @@ Career-Ops biến bất kỳ CLI AI coding nào thành một trung tâm chỉ hu
 - **Xử lý hàng loạt** -- đánh giá 10+ offer song song với sub-agents
 - **Theo dõi mọi thứ** trong một nguồn dữ liệu duy nhất với kiểm tra tính toàn vẹn
 
-> **Quan trọng: Đây KHÔNG phải công cụ spam rải đơn.** Career-ops là bộ lọc -- giúp bạn tìm những offer xứng đáng với thời gian trong hàng trăm tin tuyển dụng. Hệ thống strongly khuyến nghị không nộp đơn cho bất kỳ offer nào dưới 4.0/5. Thời gian của bạn quý giá, và nhà tuyển dụng cũng vậy. Luôn xem lại trước khi nộp.
+> **Quan trọng: Đây KHÔNG phải công cụ spam rải đơn.** Career-ops là bộ lọc -- giúp bạn tìm những offer xứng đáng với thời gian trong hàng trăm tin tuyển dụng. Hệ thống khuyến nghị không nộp đơn cho bất kỳ offer nào dưới 4.0/5. Thời gian của bạn quý giá, và nhà tuyển dụng cũng vậy. Luôn xem lại trước khi nộp.
 
 Career-ops là agentic: Claude Code điều hướng trang tuyển dụng với Playwright, đánh giá sự phù hợp bằng cách phân tích CV của bạn vs mô tả công việc (không phải so khớp từ khóa), và điều chỉnh CV cho từng tin tuyển dụng.
 
 > **Lưu ý: những đánh giá đầu tiên sẽ chưa tốt.** Hệ thống chưa biết bạn. Hãy cung cấp ngữ cảnh -- CV, câu chuyện nghề nghiệp, proof points, sở thích, điểm mạnh, những gì bạn muốn tránh. Nuôi dưỡng nó càng nhiều, nó càng tốt hơn. Hãy nghĩ như onboard một recruiter mới: tuần đầu họ cần học về bạn, sau đó họ trở nên vô giá.
-
-Được xây dựng bởi người đã dùng nó để đánh giá 740+ offer tuyển dụng, tạo 100+ CV cá nhân hóa, và đạt được vị trí Head of Applied AI. [Đọc case study đầy đủ](https://santifer.io/career-ops-system).
 
 ## Tính năng
 
@@ -73,7 +35,7 @@ Career-ops là agentic: Claude Code điều hướng trang tuyển dụng với 
 
 ```bash
 # 1. Clone và cài đặt
-git clone https://github.com/santifer/career-ops.git
+git clone https://github.com/vanhaydoi/career-job.git
 cd career-ops && npm install
 npx playwright install chromium   # Cần thiết cho tạo PDF
 
@@ -225,28 +187,6 @@ career-ops/
 - **Dashboard**: Go + Bubble Tea + Lipgloss (Catppuccin Mocha theme)
 - **Data**: Bảng Markdown + cấu hình YAML + file TSV hàng loạt
 
-## Cũng Open Source
-
-- **[cv-santiago](https://github.com/santifer/cv-santiago)** -- Trang portfolio (santifer.io) với AI chatbot, LLMOps dashboard, và case studies. Nếu bạn cần portfolio để showcase cùng tìm việc, fork và biến nó thành của bạn.
-
-## Về tác giả
-
-Tôi là Santiago -- Head of Applied AI, cựu founder (xây dựng và bán doanh nghiệp vẫn đang hoạt động với tên tôi). Tôi xây dựng career-ops để quản lý tìm việc của chính mình. Nó đã hiệu quả: tôi dùng nó để đạt được vai trò hiện tại.
-
-Portfolio và các dự án open source khác → [santifer.io](https://santifer.io)
-
-☕ [Mời tôi cà phê](https://buymeacoffee.com/santifer) nếu career-ops giúp ích cho tìm việc của bạn.
-
-## Lịch sử Star
-
-<a href="https://www.star-history.com/?repos=santifer%2Fcareer-ops&type=timeline&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=santifer/career-ops&type=timeline&legend=top-left" />
- </picture>
-</a>
-
 ## Tuyên bố miễn trừ trách nhiệm
 
 **career-ops là công cụ local, open source -- KHÔNG phải dịch vụ hosted.** Khi sử dụng phần mềm này, bạn thừa nhận:
@@ -258,23 +198,6 @@ Portfolio và các dự án open source khác → [santifer.io](https://santifer
 
 Xem [LEGAL_DISCLAIMER.md](LEGAL_DISCLAIMER.md) để biết chi tiết đầy đủ. Phần mềm này được cung cấp theo [Giấy phép MIT](LICENSE) "nguyên trạng", không có bảo hành dưới bất kỳ hình thức nào.
 
-## Contributors
-
-<a href="https://github.com/santifer/career-ops/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=santifer/career-ops" />
-</a>
-
-Đã được tuyển dụng bằng career-ops? [Chia sẻ câu chuyện của bạn!](https://github.com/santifer/career-ops/issues/new?template=i-got-hired.yml)
-
 ## Giấy phép
 
 MIT
-
-## Kết nối
-
-[![Website](https://img.shields.io/badge/santifer.io-000?style=for-the-badge&logo=safari&logoColor=white)](https://santifer.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/santifer)
-[![X](https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/santifer)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/8pRpHETxa4)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hi@santifer.io)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/santifer)
