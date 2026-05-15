@@ -2,10 +2,11 @@
 
 ## Pipeline completo
 
-1. Lee `cv.md` como fuentes de verdad
+0. **Carga el tema:** Lee `config/profile.yml → cv_preferences.template_style`. Si existe, carga el tema correspondiente de `templates/themes/themes.yml`. Si no existe o es inválido, usa el tema "ats" (default). Cada tema define fonts, colors, layout, y typography. Convierte los valores del tema a un bloque `<style>:root { ... }</style>` → `{{THEME_STYLE}}`. Si el tema es "stanford", genera además `{{THEME_FONT_CDN}}` con `<link>` a Google Fonts (Inter). Para otros temas, `{{THEME_FONT_CDN}}` queda vacío.
+1. Lee `cv.md` como fuentes de verdad. **NOTA:** `cv.md` puede contener proyectos synthetic generados por gap-fill mode. Tratarlos igual que proyectos reales — misma injection de keywords, mismo tratamiento en el PDF.
 2. Pide al usuario el JD si no está en contexto (texto o URL)
 3. Extrae 15-20 keywords del JD
-4. Detecta idioma del JD → idioma del CV (EN default)
+4. Detecta idioma del JD → idioma del CV. **Override:** Si `config/profile.yml → cv_preferences.language` tiene valor ("vi" o "en"), usar ese en lugar del idioma detectado del JD.
 5. Detecta ubicación empresa → formato papel:
    - US/Canada → `letter`
    - Resto del mundo → `a4`
@@ -19,7 +20,8 @@
 13. Lee `name` de `config/profile.yml` → normaliza a kebab-case lowercase (e.g. "John Doe" → "john-doe") → `{candidate}`
 14. Escribe HTML a `/tmp/cv-{candidate}-{company}.html`
 15. Ejecuta: `node generate-pdf.mjs /tmp/cv-{candidate}-{company}.html output/cv-{candidate}-{company}-{YYYY-MM-DD}.pdf --format={letter|a4}`
-15. Reporta: ruta del PDF, nº páginas, % cobertura de keywords
+16. Guarda snapshot MD: Copia `cv.md` → `output/cv-{candidate}-{company}-{YYYY-MM-DD}.md` (para trazabilidad — saber exactamente qué CV se usó para este PDF)
+17. Reporta: ruta del PDF, ruta del snapshot MD, nº páginas, % cobertura de keywords
 
 ## Reglas ATS (parseo limpio)
 

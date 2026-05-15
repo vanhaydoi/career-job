@@ -1,0 +1,140 @@
+# Career-Ops CV Themes
+# Each theme defines fonts, colors, layout, and typography for a CV style.
+# The HTML template reads these via CSS custom properties.
+
+themes:
+  harvard:
+    name: "Harvard Classic"
+    description: "Phong cách truyền thống, serif, đen trắng. Phù hợp Finance, Consulting, Law."
+    fonts:
+      heading: "'Times New Roman', Georgia, Garamond, serif"
+      body: "Georgia, 'Times New Roman', serif"
+    colors:
+      primary: "#000000"
+      accent: "#333333"
+      background: "#ffffff"
+    layout:
+      header_align: "center"
+      divider_style: "2px solid #000000"
+      section_case: "uppercase"
+      margins: "1in"
+      section_gap: "22px"
+    typography:
+      name_size: "22px"
+      name_weight: "700"
+      section_size: "12px"
+      section_weight: "700"
+      body_size: "11px"
+      body_line_height: "1.5"
+      company_color: "#000000"
+      company_weight: "600"
+    name_divider: "true"
+
+  mit:
+    name: "MIT Modern"
+    description: "Clean, sans-serif, hiện đại. Phù hợp Tech, Engineering, CS."
+    fonts:
+      heading: "'Helvetica Neue', Helvetica, Arial, sans-serif"
+      body: "Arial, Helvetica, sans-serif"
+    colors:
+      primary: "#1a1a1a"
+      accent: "#555555"
+      background: "#ffffff"
+    layout:
+      header_align: "left"
+      divider_style: "1.5px solid #333333"
+      section_case: "uppercase"
+      margins: "0.8in"
+      section_gap: "16px"
+    typography:
+      name_size: "26px"
+      name_weight: "700"
+      section_size: "11px"
+      section_weight: "700"
+      body_size: "10.5px"
+      body_line_height: "1.45"
+      company_color: "#1a1a1a"
+      company_weight: "600"
+    name_divider: "true"
+
+  stanford:
+    name: "Stanford Minimal"
+    description: "Tối giản, nhiều white space. Phù hợp Startup, Product, Design."
+    fonts:
+      heading: "Inter, 'Source Sans Pro', 'Helvetica Neue', sans-serif"
+      body: "Inter, 'Source Sans Pro', Arial, sans-serif"
+    colors:
+      primary: "#2d2d2d"
+      accent: "#8c1515"
+      background: "#ffffff"
+    layout:
+      header_align: "left"
+      divider_style: "1px solid #dddddd"
+      section_case: "none"
+      margins: "0.9in"
+      section_gap: "24px"
+    typography:
+      name_size: "28px"
+      name_weight: "600"
+      section_size: "13px"
+      section_weight: "600"
+      body_size: "10.5px"
+      body_line_height: "1.6"
+      company_color: "#2d2d2d"
+      company_weight: "600"
+    name_divider: "false"
+
+  mba:
+    name: "MBA Compact"
+    description: "Dày đặc thông tin, chuyên nghiệp. Phù hợp Business, Management."
+    fonts:
+      heading: "Calibri, Lato, 'Helvetica Neue', sans-serif"
+      body: "Calibri, Lato, Arial, sans-serif"
+    colors:
+      primary: "#0a0a0a"
+      accent: "#444444"
+      background: "#ffffff"
+    layout:
+      header_align: "center"
+      divider_style: "1px solid #000000"
+      section_case: "uppercase"
+      margins: "0.7in"
+      section_gap: "12px"
+    typography:
+      name_size: "20px"
+      name_weight: "700"
+      section_size: "10.5px"
+      section_weight: "700"
+      body_size: "10px"
+      body_line_height: "1.35"
+      company_color: "#0a0a0a"
+      company_weight: "700"
+    name_divider: "true"
+
+  ats:
+    name: "ATS Modern"
+    description: "Hiện đại với gradient, tối ưu ATS. All-purpose (mặc định)."
+    fonts:
+      heading: "'Space Grotesk', 'Helvetica Neue', sans-serif"
+      body: "'DM Sans', Arial, sans-serif"
+    colors:
+      primary: "hsl(187, 74%, 32%)"
+      accent: "hsl(270, 70%, 45%)"
+      background: "#ffffff"
+    layout:
+      header_align: "left"
+      divider_style: "2px solid transparent"
+      section_case: "uppercase"
+      margins: "0.6in"
+      section_gap: "18px"
+    typography:
+      name_size: "28px"
+      name_weight: "700"
+      section_size: "12px"
+      section_weight: "700"
+      body_size: "11px"
+      body_line_height: "1.5"
+      company_color: "hsl(270, 70%, 45%)"
+      company_weight: "600"
+    name_divider: "true"
+    gradient_header: "linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%))"

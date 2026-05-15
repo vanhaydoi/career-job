@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{NAME}} — CV</title>
+{{THEME_FONT_CDN}}
 <style>
   @font-face {
     font-family: 'Space Grotesk';
@@ -41,6 +42,31 @@
     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
 
+  :root {
+    --theme-font-heading: 'Space Grotesk', 'Helvetica Neue', sans-serif;
+    --theme-font-body: 'DM Sans', Arial, sans-serif;
+    --theme-color-primary: hsl(187, 74%, 32%);
+    --theme-color-accent: hsl(270, 70%, 45%);
+    --theme-color-bg: #ffffff;
+    --theme-header-align: left;
+    --theme-divider-style: 2px solid transparent;
+    --theme-section-case: uppercase;
+    --theme-margins: 0.6in;
+    --theme-section-gap: 18px;
+    --theme-name-size: 28px;
+    --theme-name-weight: 700;
+    --theme-section-size: 12px;
+    --theme-section-weight: 700;
+    --theme-body-size: 11px;
+    --theme-body-line-height: 1.5;
+    --theme-company-color: hsl(270, 70%, 45%);
+    --theme-company-weight: 600;
+    --theme-name-divider: true;
+    --theme-gradient-header: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+  }
+
+  {{THEME_STYLE}}
+
   * {
     margin: 0;
     padding: 0;
@@ -53,11 +79,11 @@
   }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    line-height: 1.5;
+    font-family: var(--theme-font-body);
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
     color: #1a1a2e;
-    background: #ffffff;
+    background: var(--theme-color-bg);
     padding: 0;
     margin: 0;
   }
@@ -66,18 +92,19 @@
     width: 100%;
     max-width: {{PAGE_WIDTH}};
     margin: 0 auto;
-    padding: 2px 0;
+    padding: var(--theme-margins);
   }
 
   /* === HEADER === */
   .header {
     margin-bottom: 20px;
+    text-align: var(--theme-header-align);
   }
 
   .header h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
+    font-family: var(--theme-font-heading);
+    font-size: var(--theme-name-size);
+    font-weight: var(--theme-name-weight);
     color: #1a1a2e;
     letter-spacing: -0.02em;
     margin-bottom: 6px;
@@ -86,7 +113,7 @@
 
   .header-gradient {
     height: 2px;
-    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    background: var(--theme-gradient-header);
     border-radius: 1px;
     margin-bottom: 10px;
   }
@@ -95,10 +122,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px 14px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--theme-font-body);
     font-size: 10.5px;
     line-height: 1.4;
     color: #555;
+    justify-content: var(--theme-header-align);
   }
 
   .contact-row a {
@@ -112,17 +140,17 @@
 
   /* === SECTIONS === */
   .section {
-    margin-bottom: 18px;
+    margin-bottom: var(--theme-section-gap);
   }
 
   .section-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: var(--theme-font-heading);
+    font-size: var(--theme-section-size);
+    font-weight: var(--theme-section-weight);
+    text-transform: var(--theme-section-case);
     letter-spacing: 0.06em;
-    color: hsl(187, 74%, 32%);
-    border-bottom: 1.5px solid #e2e2e2;
+    color: var(--theme-color-primary);
+    border-bottom: var(--theme-divider-style);
     padding-bottom: 4px;
     margin-bottom: 10px;
     line-height: 1.2;
@@ -130,7 +158,7 @@
 
   /* === PROFESSIONAL SUMMARY === */
   .summary-text {
-    font-size: 11px;
+    font-size: var(--theme-body-size);
     line-height: 1.7;
     color: #2f2f2f;
   }
@@ -148,10 +176,10 @@
   }
 
   .competency-tag {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--theme-font-body);
     font-size: 10px;
     font-weight: 500;
-    color: hsl(187, 74%, 28%);
+    color: var(--theme-color-primary);
     background: hsl(187, 40%, 95%);
     padding: 4px 10px;
     border-radius: 3px;
@@ -172,10 +200,10 @@
   }
 
   .job-company {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--theme-font-heading);
     font-size: 12.5px;
-    font-weight: 600;
-    color: hsl(270, 70%, 45%);
+    font-weight: var(--theme-company-weight);
+    color: var(--theme-company-color);
   }
 
   .job-period {
@@ -185,7 +213,7 @@
   }
 
   .job-role {
-    font-size: 11px;
+    font-size: var(--theme-body-size);
     font-weight: 600;
     color: #333;
     margin-bottom: 6px;
@@ -218,16 +246,16 @@
   }
 
   .project-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--theme-font-heading);
     font-size: 11.5px;
     font-weight: 600;
-    color: hsl(270, 70%, 45%);
+    color: var(--theme-company-color);
   }
 
   .project-badge {
     font-size: 9px;
     font-weight: 500;
-    color: hsl(187, 74%, 32%);
+    color: var(--theme-color-primary);
     background: hsl(187, 40%, 95%);
     padding: 1px 6px;
     border-radius: 2px;
@@ -261,12 +289,12 @@
 
   .edu-title {
     font-weight: 600;
-    font-size: 11px;
+    font-size: var(--theme-body-size);
     color: #333;
   }
 
   .edu-org {
-    color: hsl(270, 70%, 45%);
+    color: var(--theme-company-color);
     font-weight: 500;
   }
 
@@ -299,7 +327,7 @@
   }
 
   .cert-org {
-    color: hsl(270, 70%, 45%);
+    color: var(--theme-company-color);
   }
 
   .cert-year {
@@ -334,7 +362,7 @@
     }
 
     .page {
-      padding: 0;
+      padding: var(--theme-margins);
     }
   }
 

@@ -21,6 +21,10 @@ These files contain your personal data, customizations, and work product. Update
 | `reports/*` | Your evaluation reports |
 | `output/*` | Your generated PDFs |
 | `jds/*` | Your saved job descriptions |
+| `knowledge/topics/*` | Your personal tech knowledge files |
+| `cvs/*` | Your CV library (multiple CVs for different jobs) |
+| `cvs/_archive/*` | Your archived old CVs |
+| `cv-input/*` | Your old CVs submitted for conversion |
 
 ## System Layer (safe to auto-update)
 
@@ -28,6 +32,8 @@ These files contain system logic, scripts, templates, and instructions that impr
 
 | File | Purpose |
 |------|---------|
+| `knowledge/roles/*` | Role skill frameworks (14 IT roles) |
+| `knowledge/README.md` | Knowledge base usage guide |
 | `modes/_shared.md` | Scoring system, global rules, tools |
 | `modes/oferta.md` | Evaluation mode instructions |
 | `modes/pdf.md` | PDF generation instructions |
@@ -55,6 +61,7 @@ These files contain system logic, scripts, templates, and instructions that impr
 | `batch/batch-runner.sh` | Batch orchestrator |
 | `dashboard/*` | Go TUI dashboard |
 | `templates/*` | Base templates |
+| `templates/themes/*` | CV theme definitions |
 | `fonts/*` | Self-hosted fonts |
 | `.claude/skills/*` | Skill definitions |
 | `docs/*` | Documentation |

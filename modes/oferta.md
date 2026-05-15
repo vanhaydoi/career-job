@@ -32,6 +32,22 @@ Lee `cv.md`. Crea tabla con cada requisito del JD mapeado a líneas exactas del 
 - Si Agentic → priorizar multi-agent, HITL, orchestration
 - Si Transformation → priorizar change management, adoption, scaling
 
+### Evaluación de proyectos existentes
+
+Puntuar cada proyecto del CV contra el JD usando 6 dimensiones (ver `modes/gap-fill.md` Step 3 para el algoritmo completo):
+
+| # | Proyecto | Tech Match | Domain | Depth | Recency | Role | Link | Score | Acción |
+|---|----------|------------|--------|-------|---------|------|------|-------|--------|
+| 1 | Nombre | X/5 | X/5 | X/5 | X/5 | X/5 | X/5 | XX% | KEEP |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+
+**Clasificación:**
+- **≥80% → KEEP**: Proyecto fuerte, mantener
+- **50-79% → IMPROVE**: Carencia en bullets o descripción, sugerir mejoras
+- **<50% → REPLACE**: Desalineado con el rol, candidato a reemplazo
+
+Si algún proyecto está marcado REPLACE o el Match global está bajo, sugerir al usuario ejecutar gap-fill mode: "Tu CV tiene proyectos débiles para este rol. ¿Quieres que ejecute gap-fill para analizar gaps y generar proyectos synthetic?"
+
 Sección de **gaps** con estrategia de mitigación para cada uno. Para cada gap:
 1. ¿Es un hard blocker o un nice-to-have?
 2. ¿Puede el candidato demostrar experiencia adyacente?

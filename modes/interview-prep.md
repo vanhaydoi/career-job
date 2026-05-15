@@ -65,6 +65,10 @@ Categorize all discovered and inferred questions:
 Questions about system design, coding, architecture, domain knowledge.
 For each: the question, source, and what a strong answer looks like for this candidate specifically (reference CV proof points).
 
+**If tech-qa mode was run first:** A tech-qa file exists at `interview-prep/{company-slug}-{role-slug}-tech-qa.md`. Read it and cross-reference questions here. Mark questions already covered in tech-qa with `[→ tech-qa]` to avoid duplication. For behavioral and role-specific questions not covered by tech-qa, generate normally.
+
+**If tech-qa was NOT run:** Offer: "¿Quieres que genere preguntas técnicas detalladas con respuestas personalizadas? Ejecuta tech-qa mode." Then generate abbreviated technical questions here (focus on system design and architecture, which tech-qa covers in less depth).
+
 ### Behavioral
 Questions about leadership, conflict, collaboration, failure.
 For each: the question, source, and which story from `story-bank.md` maps best.

@@ -19,14 +19,28 @@ Si el input es una **URL** (no texto de JD pegado), seguir esta estrategia para 
 ## Paso 1 — Evaluación A-G
 Ejecutar exactamente igual que el modo `oferta` (leer `modes/oferta.md` para todos los bloques A-F + Block G Posting Legitimacy).
 
-## Paso 2 — Guardar Report .md
+## Paso 2 — Gap Gate (NUEVO)
+
+Después de la evaluación A-G, verificar si el CV necesita mejoras:
+
+1. Leer `config/profile.yml → project_generation`
+2. Si `enabled: false`, saltar este paso
+3. Si el score de match global está por debajo de `add_threshold` (default 70%), ofrecer gap-fill:
+   > "El match de tu CV con este JD es del {X}%. Tienes gaps en: {lista de skills missing/weak}.
+   > ¿Quieres que ejecute gap-fill mode para analizar gaps y generar proyectos synthetic que llenen estos huecos en tu CV?"
+4. Si user dice "yes" → ejecutar `modes/gap-fill.md` (Step 2-7 completos)
+5. Si user dice "no" → continuar con CV actual
+
+**NOTA:** Gap-fill modifica `cv.md`. El PDF se generará después con el CV actualizado.
+
+## Paso 3 — Guardar Report .md
 Guardar la evaluación completa en `reports/{###}-{company-slug}-{YYYY-MM-DD}.md` (ver formato en `modes/oferta.md`).
 Include Block G in the saved report. Add `**Legitimacy:** {tier}` to the report header.
 
-## Paso 3 — Generar PDF
-Ejecutar el pipeline completo de `pdf` (leer `modes/pdf.md`).
+## Paso 4 — Generar PDF
+Ejecutar el pipeline completo de `pdf` (leer `modes/pdf.md`). Usar el `cv.md` actual (puede haber sido modificado por gap-fill en Paso 2).
 
-## Paso 4 — Draft Application Answers (solo si score >= 4.5)
+## Paso 5 — Draft Application Answers (solo si score >= 4.5)
 
 Si el score final es >= 4.5, generar borrador de respuestas para el formulario de aplicación:
 
@@ -62,7 +76,20 @@ Si el score final es >= 4.5, generar borrador de respuestas para el formulario d
 
 **Idioma**: Siempre en el idioma del JD (EN default). Aplicar `/tech-translate`.
 
-## Paso 5 — Actualizar Tracker
+## Paso 6 — Actualizar Tracker
 Registrar en `data/applications.md` con todas las columnas incluyendo Report y PDF en ✅.
+
+## Paso 7 — Ofrecer Interview Prep (NUEVO)
+
+Después de todo el pipeline, ofrecer preparación de entrevista:
+
+> "¿Quieres que prepare preguntas de entrevista para este rol? Puedo generar:
+> - **tech-qa**: Preguntas técnicas con respuestas personalizadas basadas en tu CV
+> - **full**: Tech Q&A + Company research + STAR stories
+> - **no**: Omitir"
+
+- Si user dice "tech" → ejecutar `modes/tech-qa.md`
+- Si user dice "full" → ejecutar `modes/tech-qa.md` + `modes/interview-prep.md`
+- Si user dice "no" → finalizar
 
 **Si algún paso falla**, continuar con los siguientes y marcar el paso fallido como pendiente en el tracker.

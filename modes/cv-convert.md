@@ -119,6 +119,7 @@ After structuring, flag any concerns:
 1. Write the structured CV to `cv-input/converted/{filename}.md`
 2. Show the user a diff/summary of what was extracted and structured
 3. **NEVER overwrite `cv.md`** — the user must manually copy the converted file to root
+4. **NOTE:** Converted CVs in `cv-input/converted/` are auto-detected by `new-cv` wizard. If the user later runs `/career-ops new-cv`, the wizard will offer to pre-fill answers from these files.
 
 ### Step 7 — Report
 

@@ -82,6 +82,10 @@ When using [OpenCode](https://opencode.ai), the following slash commands are ava
 | `/career-ops-patterns` | `/career-ops patterns` | Analyze rejection patterns and improve targeting |
 | `/career-ops-followup` | `/career-ops followup` | Follow-up cadence tracker |
 | `/career-ops-convert` | `/career-ops convert` | Convert CV from any format to markdown |
+| `/career-ops-gapfill` | `/career-ops gap-fill` | Analyze skill gaps and generate synthetic projects |
+| `/career-ops-techqa` | `/career-ops tech-qa` | Generate technical interview questions from knowledge base |
+| `/career-ops-newcv` | `/career-ops new-cv` | Interactive wizard to create a new CV from scratch |
+| `/career-ops-cvswitch` | `/career-ops cv-switch` | Switch active CV from the CV library |
 
 **Note:** OpenCode commands invoke the same `.claude/skills/career-ops/SKILL.md` skill used by Claude Code. The `modes/*` files are shared between both platforms.
 
@@ -215,6 +219,10 @@ Default modes are in `modes/` (English).
 | Asks about rejection patterns or wants to improve targeting | `patterns` |
 | Asks about follow-ups or application cadence | `followup` |
 | Wants to convert a CV file (PDF/DOCX/image) to markdown | `convert` |
+| Asks to analyze skill gaps or generate projects | `gap-fill` |
+| Asks for technical interview questions | `tech-qa` |
+| Asks to create a new CV from scratch | `new-cv` |
+| Asks to switch between CVs | `cv-switch` |
 
 ### CV Source of Truth
 
